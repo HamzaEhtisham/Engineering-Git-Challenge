@@ -2,15 +2,16 @@ const root = (req, res) => {
   res.send('Welcome to express')
 }
 
-const healthCheck = (req, res) => {
-  const health = {
-    uptime: process.uptime(),
-    status: 'OK'
+const getUser = (req, res) => {
+  const user = {
+    name: 'Umair ahmed',
+    age: 22,
+    profession: 'Software Engineer | Fullstack Dev'
   }
-  res.json(health)
+  res.json(user)
 }
 
 module.exports = {
   root,
-  healthCheck
+  getUser
 }
